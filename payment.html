@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <!-- Según la página en la que nos encontremos, así destacaremos el texto para indicar al usuario dónde nos encontramos -->
+            <li>01 CUSTOMER INFO</li>
+            <li>02 SHIPPING INFO</li>
+            <li class="location">03 PAYMENT SELECTION</li>
+        </ul>
+    </header>
+
+    <main>
+        <section>
+
+            <h1>Payment Selection</h1>
+
+            <form action="#">
+                <fieldset>
+                    <label for="creditCard">
+                        <!-- Meto dentro del label tanto el párrafo como las imágenes para que podamos seleccionar con ellos este método de pago. Sería correcto? -->
+                        <div>
+                            <input type="radio" name="metodo" id="creditCard">
+                            <p>Safe money transfer using your bank account. Visa, Maestro, Discover, American Express.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="..." alt="">
+                            <!-- Dejo alt vacío porque en el texto ya se aclaran las tarjetas aceptadas -->
+                            <img src="..." alt="">
+                            <img src="..." alt="">
+                        </div>
+                    </label>
+
+                    <fieldset>
+                        <div>
+                            <label for="creditCard">CREDIT CARD</label>
+                            <input type="number" id="creditCard" placeholder="0000 0000 0000 0000">
+                            <button type="button">(imagen de tarjeta)</button> <!-- Dudo si sería una imágen, botón -->
+                        </div>
+                        <div>
+                            <label for="nameCard">NAME ON CARD</label>
+                            <input type="text" id="nameCard">
+                        </div>
+                        <div>
+                            <label for="expire">EXPIRE DATE</label>
+                            <!-- <input type="month" id="expire" placeholder="MM/YY">   
+                            <input type="date" id="expire" placeholder="MM/YY"> No utilicé estos tipos de inputs porque no admitía placeholder,aunque los considero más apropiados. Está bien así?-->
+                            <input type="text" id="expire" placeholder="MM/YY">
+                        </div>
+                        <div>
+                            <label for="cvvCode">CVV CODE</label>
+                            <input type="number" id="cvvCode">
+                            <button type="button"></button>
+                            <!-- Mostraría la información requerida según la acción realizada. Si fuera un link usaría el tagg a -->
+                        </div>
+                    </fieldset>
+                </fieldset>
+        </section>
+
+        <div>
+            <!-- No estoy seguro si este div sería necesario para luego trabajar con todo el bloque en CSS -->
+            <label for="paypal">
+                <!-- Meto dentro del label tanto el párrafo como las imágenes para que podamos seleccionar con ellos este método de pago -->
+                <div>
+                    <input type="radio" name="metodo" id="paypal">
+                    <p>You will be redirected to PayPal website to complete your purchase securely.</p>
+                </div>
+                <div>
+                    <img src="..." alt=""><!-- No añado texto alternativo porque no aprotaría información extra -->
+                </div>
+            </label>
+        </div>
+        </form>
+    </main>
+    <aside>
+        <h2>Shopping Cart</h2>
+        <p>2</p> <!-- Número de productos en el carro de la compra -->
+
+        <ul>
+            <!-- Listado de los productos en el carro -->
+            <li>
+                <div>
+                    <img src="..." alt="">
+                    <p>Lightweight College Backpack</p>
+                    <p>€ 99.90</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="..." alt="">
+                    <p>Business Casual Leather Watch Waterproof</p>
+                    <p>€ 69.90</p>
+                </div>
+            </li>
+        </ul>
+        <form action="#">
+            <button type="button">Have a Voucher?</button>
+            <div>
+                <!-- Uso el div porque puede ser más útil trabajarlo en CSS después -->
+                <input type="text" id="voucher" placeholder="CDE000">
+            </div>
+        </form>
+        <div>
+            <p>Subtotal <span>€ 169.80</span></p>
+            <p>Shipping <span>Free</span></p>
+            <p>Subtotal <span>€ 169.80</span></p>
+        </div>
+    </aside>
+
+</body>
+
+</html>
+
+
+<div>
+    <a href="#">Back to Shipping Info</a>
+    <button type="submit">COMPLETE ORDER</button>
+</div>

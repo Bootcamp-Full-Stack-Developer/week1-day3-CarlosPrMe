@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <!-- Según la página en la que nos encontremos, así destacaremos el texto para indicar al usuario dónde nos encontramos -->
+            <li class="location">01 CUSTOMER INFO</li>
+            <li>02 SHIPPING INFO</li>
+            <li>03 PAYMENT SELECTION</li>
+        </ul>
+    </header>
+
+    <main>
+        <h1>Customer Information</h1>
+
+        <form action="#">
+
+            <fieldset>
+                <!-- <legend>Customer Information</legend>   Opte por la opción de poner un h1 porque lo consideré más adecuado. No sé si es lo correcto-->
+                <div>
+                    <label for="name">FIRST NAME</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div>
+                    <label for="surname">LAST NAME</label>
+                    <input type="text" id="surname" required>
+                </div>
+                <div>
+                    <label for="address">ADRESS</label>
+                    <input type="text" id="address" required>
+                </div>
+                <div>
+                    <label for="country">COUNTRY
+                        <button type="button">Select your Country</button>
+                        <div>
+                            <!-- Se desplegaría al hacer click en el button y elegimos una opción cuyo value debería quedarse en el campo -->
+                            <div>
+                                <input type="radio" name="country" id="alemania" value="">
+                                <label for="alemania">Alemania</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="country" id="inglaterra" value="">
+                                <label for="inglaterra"> Inglaterra</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="country" id="portugal" value="">
+                                <label for="portugal">Portugal</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="country" id="italia" value="">
+                                <label for="italia">Italia</label>
+                            </div>
+                            <div>
+                                <input type="radio" name="country" id="espana" value="">
+                                <label for="espana">España</label>
+                            </div>
+                        </div>
+                    </label>
+                </div>
+                <div>
+                    <label for="city">CITY</label>
+                    <input type="text" id="city" required>
+                </div>
+                <div>
+                    <label for="postalCode">POSTAL CODE</label>
+                    <input type="number" id="postalCode" required>
+                    <!-- He dejado input number, aunque no estoy seguro si es más adecuado usar tipo text con el atributo maxlength="5" -->
+                    <a href="#">FIND</a>
+                    <!-- Entiendo que va a un enlace donde encontrar el código postal. Si no hiciera esto podría ser un button, si es que no lo tiene que ser ya y estoy equivocado-->
+                </div>
+                <div>
+                    <label for="tel">TELEPHONE</label>
+                    <input type="tel" id="tel" required>
+                </div>
+
+            </fieldset>
+            <div>
+                <a href="#">Return to shop</a>
+                <button type="submit">CONTINUE TO SHIPPING</button>
+            </div>
+        </form>
+    </main>
+
+    <aside>
+        <h2>Shopping Cart</h2>
+        <p>2</p> <!-- Número de productos en el carro de la compra -->
+
+        <ul>
+            <!-- Listado de los productos en el carro -->
+            <li>
+                <div>
+                    <img src="..." alt="">
+                    <p>Lightweight College Backpack</p>
+                    <p>€ 99.90</p>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <img src="..." alt="">
+                    <p>Business Casual Leather Watch Waterproof</p>
+                    <p>€ 69.90</p>
+                </div>
+            </li>
+        </ul>
+        <form action="#">
+            <button type="button">Have a Voucher?</button>
+            <div>
+                <!-- Uso el div porque puede ser más útil trabajarlo en CSS después -->
+                <input type="text" id="voucher" placeholder="CDE000">
+            </div>
+        </form>
+        <div>
+            <p>Subtotal <span>€ 169.80</span></p>
+            <p>Shipping <span>Free</span></p>
+            <p>Subtotal <span>€ 169.80</span></p>
+        </div>
+
+
+    </aside>
+
+
+</body>
+
+</html>

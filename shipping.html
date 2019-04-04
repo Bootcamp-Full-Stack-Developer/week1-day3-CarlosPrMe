@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <!-- Según la página en la que nos encontremos, así destacaremos el texto para indicar al usuario dónde nos encontramos -->
+            <li>01 CUSTOMER INFO</li>
+            <li class="location">02 SHIPPING INFO</li>
+            <li>03 PAYMENT SELECTION</li>
+        </ul>
+    </header>
+
+    <main>
+        <article>
+            <h1>Shipping Information</h1>
+            <div>
+                <address>
+                    Jamy Larson <br>
+                    Unit 2 Green Mount Retail Park<br>
+                    Halifax<br>
+                    HX1 5QN<br>
+                    Tel: 0344 332 5931<br>
+                    <a href="#">Edit Address</a>
+                    <a href="#">Add New</a>
+                </address>
+                <div>
+                    <!-- Pintamos el mapa con la localización -->
+                </div>
+            </div>
+        </article>
+        <section>
+            <!-- Tal vez usar un div en lugar del section, simplemente?? -->
+            <h2>Shipping Method</h2>
+            <form action="#">
+                <fieldset>
+                    <div>
+                        <label for="standart-delivery"> <!-- Dejo todo dentro del label para que la selección se haga también en el resto de elementos. Es correcto? -->
+                            <input type="radio" id="standart-delivery">
+                            <p>Standart Delivery <span>Free</span></p>
+                            <p>Estimated 14-20 Day Shipping (Duties and taxes may be due upon delivery)</p>
+                        </label>
+                    </div>
+                    <div>
+                        <label for="fast-delivery">
+                            <input type="radio" id="fast-delivery">
+                            <p>Fast Delivery <span>€8.00</span></p>
+                            <p>Estimated 2-5 Days Shipping (Duties and taxes may be due upon delivery)</p>
+                        </label>
+                    </div>
+                </fieldset>
+                <div>
+                    <a href="#">Back to Customer Info</a>
+                    <button type="submit">CONTINUE TO PAYMENT</button>
+                </div>
+            </form>
+        </section>
+        <aside>
+            <h2>Shopping Cart</h2>
+            <p>2</p> <!-- Número de productos en el carro de la compra -->
+
+            <ul>
+                <!-- Listado de los productos en el carro -->
+                <li>
+                    <div>
+                        <img src="..." alt="">
+                        <p>Lightweight College Backpack</p>
+                        <p>€ 99.90</p>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <img src="..." alt="">
+                        <p>Business Casual Leather Watch Waterproof</p>
+                        <p>€ 69.90</p>
+                    </div>
+                </li>
+            </ul>
+            <form action="#">
+                <button type="button">Have a Voucher?</button>
+                <div>
+                    <!-- Uso el div porque puede ser más útil trabajarlo en CSS después -->
+                    <input type="text" id="voucher" placeholder="CDE000">
+                </div>
+            </form>
+            <div>
+                <p>Subtotal <span>€ 169.80</span></p>
+                <p>Shipping <span>Free</span></p>
+                <p>Subtotal <span>€ 169.80</span></p>
+            </div>
+        </aside>
+    </main>
+</body>
+
+</html>
