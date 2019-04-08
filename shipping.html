@@ -12,16 +12,16 @@
 
     <main>
         <form action="#">
-            <div class="mostrarubicacion">
+            <div class="location">
                 <ol>
-                    <li>Customer Info</li>
-                    <li class="location">Shipping Info</li>
-                    <li>Payment Selection</li>
+                    <li class="location__item">Customer Info</li>
+                    <li class="location__item location__item--now">Shipping Info</li>
+                    <li class="location__item">Payment Selection</li>
                 </ol>
             </div>
 
             <article>
-                <h1>Shipping Information</h1>
+                <h1 class="header__heading">Shipping Information</h1>
 
                 <address>
                     <span></span> Larson <br>
@@ -30,78 +30,78 @@
                     <span></span>HX1 5QN<br>
                     <span></span>Tel: 0344 332 5931<br>
                 </address>
-                <button type="button">Add New</button>
-                <button type="button">Edit Address</button>
+                <button type="button" class="btn btn--link">Add New</button>
+                <button type="button" class="btn btn--link">Edit Address</button>
                 <div>
                     ...mapa...
                     <!-- Pintamos el mapa con la localización -->
                 </div>
 
-                <h1>Shipping Method</h1>
+                <h1 class="header__heading">Shipping Method</h1>
 
                 <div>
-                    <label for="standart-delivery">Standart Delivery <span>Free</span></label>
-                    <input type="radio" id="standart-delivery">
-                    <p>Estimated 14-20 Day Shipping (Duties and taxes may be due upon delivery)</p>
+                    <label for="standart-delivery" class="form__label">Standart Delivery <span class="form__price">Free</span></label>
+                    <input type="radio" id="standart-delivery" class="form__radio">
+                    <p class="form__detail">Estimated 14-20 Day Shipping (Duties and taxes may be due upon delivery)</p>
                 </div>
                 <div>
-                    <label for="fast-delivery">Fast Delivery <span>€8.00</span></label>
-                    <input type="radio" id="fast-delivery">
-                    <p>Estimated 2-5 Days Shipping (Duties and taxes may be due upon delivery)</p>
+                    <label for="fast-delivery" class="form__label">Fast Delivery <span class="form__price">€8.00</span></label>
+                    <input type="radio" id="fast-delivery" class="form__radio">
+                    <p class="form__detail">Estimated 2-5 Days Shipping (Duties and taxes may be due upon delivery)</p>
                 </div>
             </article>
-            <button type="button">Back to Customer Info</button>
-            <button type="submit">Continue to payment</button>
+            <button type="button" class="btn btn--link">Back to Customer Info</button>
+            <button type="submit" class="btn btn--primary">Continue to payment</button>
 
         </form>
     </main>
 
     <aside>
-            <h1>Shopping Cart <span>2</span></h1>
-    
-            <ul>
-                <li>
-                    <img src="..." alt="Mochila de color negro fabricada en tela">
-                    Lightweight College Backpack
-                    <span>€ 99.90</span>
-                </li>
-                <li>
-                    <img src="..." alt="Reloj con correa de cuero">
-                    Business Casual Leather Watch Waterproof
-                    <span>€ 69.90</span>
-                </li>
-            </ul>
-            <div class="desplegar">
-                <button type="button">Have a Voucher?</button>
-                <div>
-                    <form action="#">
-                        <label for="voucher">Voucher</label>
-                        <input type="text" id="voucher" placeholder="CDE000">
-                        <button type="submit">Usar</button>
-                    </form>
-                </div>
+        <h1 class="header__heading">Shopping Cart <span class="products-number">2</span></h1>
+
+        <ul>
+            <li class="cart__item">
+                <img src="..." alt="Mochila de color negro fabricada en tela" class="cart__img">
+                Lightweight College Backpack
+                <span class="cart__price">€ 99.90</span>
+            </li>
+            <li class="cart__item">
+                <img src="..." alt="Reloj con correa de cuero" class="cart__img">
+                Business Casual Leather Watch Waterproof
+                <span class="cart__price">€ 69.90</span>
+            </li>
+        </ul>
+        <div class="dropdown">
+            <button type="button" class="dropdown__btn">Have a Voucher?</button>
+            <div class="dropdown__menu">
+                <form action="#" class="form-body">
+                    <label for="voucher" class="form__label">Voucher</label>
+                    <input type="text" id="voucher" class="form__input" placeholder="CDE000">
+                    <button type="submit" class="btn btn--success">Usar</button>
+                </form>
             </div>
-    
-            <table>
-                <tr>
-                    <th scope="row">Subtotal</th>
-                    <td>€ 169.80</td>
-                </tr>
-                <tr>
-                    <th scope="row">Shipping</th>
-                    <td>Free</td>
-                </tr>
-                <tr>
-                    <!-- Esta fila solo es una simulacion en el supuesto de introducir el descuento -->
-                    <th scope="row">Voucher</th>
-                    <td>X</td>
-                </tr>
-                <tr class="total">
-                    <th scope="row">Total</th>
-                    <td>€ 169.80</td>
-                </tr>
-            </table>
-        </aside>
+        </div>
+
+        <table class="table-cart">
+            <tr>
+                <th scope="row" class="table-cart__title">Subtotal</th>
+                <td class="table-cart__price">€ 169.80</td>
+            </tr>
+            <tr>
+                <th scope="row" class="table-cart__title">Shipping</th>
+                <td class="table-cart__price">Free</td>
+            </tr>
+            <tr>
+                <!-- Esta fila solo es una simulacion en el supuesto de introducir el descuento -->
+                <th scope="row" class="table-cart__title">Voucher</th>
+                <td class="table-cart__price">X</td>
+            </tr>
+            <tr class="total">
+                <th scope="row">Total</th>
+                <td class="table-cart__total">€ 169.80</td>
+            </tr>
+        </table>
+    </aside>
 </body>
 
 </html>

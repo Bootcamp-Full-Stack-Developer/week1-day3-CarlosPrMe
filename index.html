@@ -13,100 +13,100 @@
 
     <main>
         <section>
-            <div class="mostrarubicacion">
+            <div class="location">
                 <ol>
-                    <li class="location">Customer Info</li>
-                    <li>Shipping Info</li>
-                    <li>Payment Selection</li>
+                    <li class="location__item location__item--now">Customer Info</li>
+                    <li class="location__item">Shipping Info</li>
+                    <li class="location__item">Payment Selection</li>
                 </ol>
             </div>
 
-            <h1>Customer Information</h1>
+            <h1 class="header__heading">Customer Information</h1>
 
-            <form action="#">
+            <form action="#" class="form">
                 <div>
-                    <label for="name">First name</label>
-                    <input type="text" id="name" required>
+                    <label for="name" class="form__label">First name</label>
+                    <input type="text" id="name" class="form__input" required>
                 </div>
                 <div>
-                    <label for="surname">Last name</label>
-                    <input type="text" id="surname" required>
+                    <label for="surname" class="form__label">Last name</label>
+                    <input type="text" id="surname" class="form__input" required>
                 </div>
                 <div>
-                    <label for="address">Address</label>
-                    <input type="text" id="address" required>
+                    <label for="address" class="form__label">Address</label>
+                    <input type="text" id="address" class="form__input" required>
                 </div>
                 <div>
-                    <label for="country">Country</label>
-                    <select id="country">
-                        <option selected>Select your country</option>
-                        <option value="">Portugal</option>
-                        <option value="">Alemania</option>
-                        <option value="">Francia</option>
+                    <label for="country" class="form__label">Country</label>
+                    <select id="country" class="form__select">
+                        <option selected class="form__option">Select your country</option>
+                        <option value="" class="form__option">Portugal</option>
+                        <option value="" class="form__option">Alemania</option>
+                        <option value="" class="form__option">Francia</option>
                     </select>
                 </div>
                 <div>
-                    <label for="city">City</label>
-                    <input type="text" id="city" required>
+                    <label for="city" class="form__label">City</label>
+                    <input type="text" id="city" class="form__input" required>
                 </div>
                 <fieldset>
-                    <label for="postalCode">Postal code</label>
-                    <input type="text" id="postalCode" required maxlength="5">
-                    <button type="button">Find</button>
+                    <label for="postalCode" class="form__label">Postal code</label>
+                    <input type="text" id="postalCode" class="form__input" required maxlength="5">
+                    <button type="button" class="btn btn--postal">Find</button>
                 </fieldset>
                 <div>
-                    <label for="tel">Telephone</label>
-                    <input type="tel" id="tel" required>
+                    <label for="tel" class="form__label">Telephone</label>
+                    <input type="tel" id="tel" class="form__input" required>
                 </div>
             </form>
-            <a href="#">Return to shop</a>
-            <button type="submit">CONTINUE TO SHIPPING</button>
+            <a href="#" class="btn btn--link">Return to shop</a>
+            <button type="submit" class="btn btn--primary">CONTINUE TO SHIPPING</button>
         </section>
     </main>
 
     <aside>
-        <h1>Shopping Cart <span>2</span></h1>
+        <h1 class="header__heading">Shopping Cart <span class="products-number">2</span></h1>
 
         <ul>
-            <li>
-                <img src="..." alt="Mochila de color negro fabricada en tela">
+            <li class="cart__item">
+                <img src="..." alt="Mochila de color negro fabricada en tela" class="cart__img">
                 Lightweight College Backpack
-                <span>€ 99.90</span>
+                <span class="cart__price">€ 99.90</span>
             </li>
-            <li>
-                <img src="..." alt="Reloj con correa de cuero">
+            <li class="cart__item">
+                <img src="..." alt="Reloj con correa de cuero" class="cart__img">
                 Business Casual Leather Watch Waterproof
-                <span>€ 69.90</span>
+                <span class="cart__price">€ 69.90</span>
             </li>
         </ul>
-        <div class="desplegar">
-            <button type="button">Have a Voucher?</button>
-            <div>
-                <form action="#">
-                    <label for="voucher">Voucher</label>
-                    <input type="text" id="voucher" placeholder="CDE000">
-                    <button type="submit">Usar</button>
+        <div class="dropdown">
+            <button type="button" class="dropdown__btn">Have a Voucher?</button>
+            <div class="dropdown__menu">
+                <form action="#" class="form-body">
+                    <label for="voucher" class="form__label">Voucher</label>
+                    <input type="text" id="voucher" class="form__input" placeholder="CDE000">
+                    <button type="submit" class="btn btn--success">Usar</button>
                 </form>
             </div>
         </div>
 
-        <table>
+        <table class="table-cart">
             <tr>
-                <th scope="row">Subtotal</th>
-                <td>€ 169.80</td>
+                <th scope="row" class="table-cart__title">Subtotal</th>
+                <td class="table-cart__price">€ 169.80</td>
             </tr>
             <tr>
-                <th scope="row">Shipping</th>
-                <td>Free</td>
+                <th scope="row" class="table-cart__title">Shipping</th>
+                <td class="table-cart__price">Free</td>
             </tr>
             <tr>
                 <!-- Esta fila solo es una simulacion en el supuesto de introducir el descuento -->
-                <th scope="row">Voucher</th>
-                <td>X</td>
+                <th scope="row" class="table-cart__title">Voucher</th>
+                <td class="table-cart__price">X</td>
             </tr>
             <tr class="total">
                 <th scope="row">Total</th>
-                <td>€ 169.80</td>
+                <td class="table-cart__total">€ 169.80</td>
             </tr>
         </table>
     </aside>

@@ -12,101 +12,101 @@
 
     <main>
         <section>
-            <div class="mostrarubicacion">
+            <div class="location">
                 <ol>
-                    <li>Customer Info</li>
-                    <li>Shipping Info</li>
-                    <li class="location">Payment Selection</li>
+                    <li class="location__item">Customer Info</li>
+                    <li class="location__item">Shipping Info</li>
+                    <li class="location__item location__item--now">Payment Selection</li>
                 </ol>
             </div>
 
-            <h1>Payment Selection</h1>
+            <h1 class="header__heading">Payment Selection</h1>
 
             <form action="#">
                 <fieldset>
                     <div>
-                        <input type="radio" name="metodo" id="creditCard">
-                        <label for="creditCard">Credit Card</label>
-                        <p>Safe money transfer using your bank account. Visa, Maestro, Discover, American Express.
+                        <input type="radio" name="metodo" id="creditCard" class="form__radio">
+                        <label for="creditCard" class="form__label">Credit Card</label>
+                        <p class="form__detail">Safe money transfer using your bank account. Visa, Maestro, Discover, American Express.
                         </p>
                     </div>
-                    <div class="desplegable">
+                    <div class="">
                         <div>
                             <label for="creditNumber">Credit number
                                 <div>
-                                    <input type="number" id="creditNumber" placeholder="0000 0000 0000 0000">
-                                    <span>icono</span>
+                                    <input type="number" id="creditNumber" placeholder="0000 0000 0000 0000" class="form_input">
+                                    <span class="icon">icono</span>
                                 </div>
                             </label>
                         </div>
                         <div>
-                            <label for="nameCard">Name on card</label>
-                            <input type="text" id="nameCard">
+                            <label for="nameCard" class="form_label">Name on card</label>
+                            <input type="text" id="nameCard" class="form_input">
                         </div>
                         <div>
-                            <label for="expire">EXPIRE DATE</label>
-                            <input type="text" id="expire" placeholder="MM/YY">
+                            <label for="expire" class="form_label">EXPIRE DATE</label>
+                            <input type="text" id="expire" placeholder="MM/YY" class="form_input">
                         </div>
                         <div>
-                            <label for="cvvCode">CVV CODE</label>
-                            <input type="number" id="cvvCode">
-                            <span>icono</span>
+                            <label for="cvvCode" class="form_label">CVV CODE</label>
+                            <input type="number" id="cvvCode" class="form_input">
+                            <span class="icon">icono</span>
                         </div>
                         <div>
-                            <input type="radio" name="metodo" id="paypal">
-                            <label for="paypal">Paypal</label>
-                            <p>You will be redirected to PayPal website to complete your purchase securely.</p>
+                            <input type="radio" name="metodo" id="paypal" class="form_radio">
+                            <label for="paypal" class="form_label">Paypal</label>
+                            <p class="form__detail">You will be redirected to PayPal website to complete your purchase securely.</p>
                         </div>
                     </div>
-                    <button type="button">Back to Shipping Info</button>
-                    <button type="submit">Complete Order</button>
+                    <button type="button" class="btn btn--link">Back to Shipping Info</button>
+                    <button type="submit" class="btn btn--primary">Complete Order</button>
                 </fieldset>
             </form>
         </section>
     </main>
     <aside>
-        <h1>Shopping Cart <span>2</span></h1>
+        <h1 class="header__heading">Shopping Cart <span class="products-number">2</span></h1>
 
         <ul>
-            <li>
-                <img src="..." alt="Mochila de color negro fabricada en tela">
+            <li class="cart__item">
+                <img src="..." alt="Mochila de color negro fabricada en tela" class="cart__img">
                 Lightweight College Backpack
-                <span>€ 99.90</span>
+                <span class="cart__price">€ 99.90</span>
             </li>
-            <li>
-                <img src="..." alt="Reloj con correa de cuero">
+            <li class="cart__item">
+                <img src="..." alt="Reloj con correa de cuero" class="cart__img">
                 Business Casual Leather Watch Waterproof
-                <span>€ 69.90</span>
+                <span class="cart__price">€ 69.90</span>
             </li>
         </ul>
-        <div class="desplegar">
-            <button type="button">Have a Voucher?</button>
-            <div>
-                <form action="#">
-                    <label for="voucher">Voucher</label>
-                    <input type="text" id="voucher" placeholder="CDE000">
-                    <button type="submit">Usar</button>
+        <div class="dropdown">
+            <button type="button" class="dropdown__btn">Have a Voucher?</button>
+            <div class="dropdown__menu">
+                <form action="#" class="form-body">
+                    <label for="voucher" class="form__label">Voucher</label>
+                    <input type="text" id="voucher" class="form__input" placeholder="CDE000">
+                    <button type="submit" class="btn btn--success">Usar</button>
                 </form>
             </div>
         </div>
 
-        <table>
+        <table class="table-cart">
             <tr>
-                <th scope="row">Subtotal</th>
-                <td>€ 169.80</td>
+                <th scope="row" class="table-cart__title">Subtotal</th>
+                <td class="table-cart__price">€ 169.80</td>
             </tr>
             <tr>
-                <th scope="row">Shipping</th>
-                <td>Free</td>
+                <th scope="row" class="table-cart__title">Shipping</th>
+                <td class="table-cart__price">Free</td>
             </tr>
             <tr>
                 <!-- Esta fila solo es una simulacion en el supuesto de introducir el descuento -->
-                <th scope="row">Voucher</th>
-                <td>X</td>
+                <th scope="row" class="table-cart__title">Voucher</th>
+                <td class="table-cart__price">X</td>
             </tr>
             <tr class="total">
                 <th scope="row">Total</th>
-                <td>€ 169.80</td>
+                <td class="table-cart__total">€ 169.80</td>
             </tr>
         </table>
     </aside>
